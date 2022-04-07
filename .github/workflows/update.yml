@@ -54,8 +54,8 @@ jobs:
           set -x
 
           cp ssh_config /root/.ssh/config
-          git config user.name ${{ secrets.GIT_COMMIT_NAME }}
-          git config user.email ${{ secrets.GIT_COMMIT_EMAIL }}
+          git config user.name sunwsong
+          git config user.email sunwsong@github
 
           genpac --pac-proxy "SOCKS5 127.0.0.1:1091" --gfwlist-url - --gfwlist-local gfwlist/gfwlist.txt -o gfwlist.pac
           sed '1,7d' -i gfwlist.pac
